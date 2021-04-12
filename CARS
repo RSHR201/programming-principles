@@ -1,0 +1,83 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Classes
+{
+    class Car
+    {
+        //Attributes
+        //class variables
+        string _strModel;
+        //public static
+        string _strColor;
+        public static int _nTotalCars;
+        private int _nYear;
+        private double _fPrice;
+
+        //Constructor
+        public Car()
+        {
+            _nTotalCars++;
+            _strModel = "Corolla";
+            _strColor = "Red";
+            _nYear = 2020;
+            _fPrice = 1234.56;
+            _strMaker = "Toyota";
+        }
+
+        public void newPurchase()
+        {
+            _nTotalCars++;
+            //_nTotalCars = _nTotalCars + 1;
+        }
+
+        public int getTotalCars()
+        {
+            return _nTotalCars;
+        }
+
+        public int Year
+        {
+            get
+            {
+                return _nYear;
+            }
+
+            set
+            {
+                _nYear = value;
+            }
+        }
+
+        public double Price { get => _fPrice; set => _fPrice = value; }
+
+        public string _strMaker { get; set; }
+
+        public string getColor()
+        {
+            return _strColor;
+        }
+
+        public void setColor(string strColor)
+        {
+            _strColor = strColor;
+
+            double fColorBrightness = 0.1;
+            //compute brightness
+            double brightPrcnt = 100 * fColorBrightness;
+            Console.WriteLine(brightPrcnt);
+
+        }
+
+        
+        public void setModel()
+        {
+
+            _strModel = "Honda";
+
+            //double ModelPrcnt = 100 * fColorBrightness;
+        }
+
+    }
+}
